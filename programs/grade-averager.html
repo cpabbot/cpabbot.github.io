@@ -1,0 +1,135 @@
+<html>
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="../css/pgCSS.css">
+    
+    <style>
+    #output {
+      border: 7px groove #00ffff;
+      width: 300px;
+      height: 100px;
+      background-color: #e6e6e6;
+      text-align: center;
+    }
+    #outputP {
+      font-size:20px;
+      text-align: center;
+      margin: auto;
+      padding-top: 20px;
+     }
+    #outputTotal {
+      font-size:25px;
+      text-align: center;
+      margin: auto;
+      padding-top: 20px;
+     }
+    </style>
+</head>
+<body>
+<!--Grade Averager-->
+    <h3>Grade Averager</h3>
+    
+    Input Grades <input type="number" id="numerator" min="0" max="1000" size="4" value="10"> / <input type="number" id="denominator" min="0" max="1000" value="100" size="4">
+    
+    <br><button id="submit">Input Next Grade</button>
+    <button id="done">Done</button>
+    <div id="output"><p id="outputP"></p><p id="outputTotal"></p></div>
+    
+    How many points is the assignment worth? (ex "100") <input id="potentialAssignmentWorth" type="number" min="0" max="1000"><br><br>
+    
+    <input type="checkbox" id="total" onclick="oneCheck1()">
+    What class/total grade do you want? (ex. "99") <input id="gradeGoalTotal" type="number" min="0" max="100">
+    
+    <br>.................OR..................<br>
+    
+    <input type="checkbox" id="assignment" onclick="oneCheck2()">
+    What assignment grade to test? <input id="gradeGoalAssignment" type="number" min="0" max="100">
+    <br><button id="potential">See Potential Grade</button>
+    
+    <button id="reset">Reset</button>
+    
+    <br><p id="potential_output"></p>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+    var totalNumerator = 0;
+    var totalDenominator = 0;
+    var numerator;
+    var denominator;
+    var potentialScore;
+    var necessaryScore;
+    var worth;
+    var assignmentGoal;
+$(document).ready(function() {
+    $("#submit").click(function() {
+        numerator = document.getElementById("numerator").value;
+        totalNumerator = totalNumerator + Number(numerator);
+        denominator = document.getElementById("denominator").value;
+        totalDenominator = totalDenominator + Number(denominator);
+        addData();
+    });
+    $("#done").click(function() {
+        document.getElementById("numerator").value="";
+        document.getElementById("denominator").value="";
+        outputData();
+    });
+    $("#reset").click(function() {
+        totalNumerator = 0;
+        totalDenominator = 0;
+        $("#outputP").html("");
+        $("#outputTotal").html("");
+    });
+    $("#potential").click(function() {
+        var t = document.getElementById("total");
+        var a = document.getElementById("assignment");
+        worth = document.getElementById("potentialAssignmentWorth").value;
+        worth = Number(worth);
+        
+        if(t.checked == true) {
+            var totalGoal = document.getElementById("gradeGoalTotal").value;
+            totalGoal = Number(totalGoal);
+            necessaryScore = ((totalGoal/100)*(totalDenominator+worth)-totalNumerator);
+            outputPotentialData();
+        }
+        if(a.checked == true) {
+            assignmentGoal = document.getElementById("gradeGoalAssignment").value;
+            assignmentGoal = Number(assignmentGoal);
+            potentialScore = (totalNumerator+assignmentGoal)/(totalDenominator+worth)*100;
+            outputPotentialDataA();
+        }
+    });
+});
+    function addData() {
+        $("#outputP").html(numerator + " / " + denominator);
+        $("#outputTotal").html(totalNumerator + " / " + totalDenominator);
+    }
+    function outputData() {
+        $("#outputP").html("");
+        $("#outputTotal").html("");
+        var score = (totalNumerator/totalDenominator)*100+"%";
+        $("#outputTotal").html(totalNumerator + " / " + totalDenominator + " = " + score);
+    }
+    function oneCheck1() {
+        var t = document.getElementById("total");
+        var a = document.getElementById("assignment");
+        if(t.checked == true && a.checked == true) {
+            a.checked = false;
+        }
+    }
+    function oneCheck2() {
+        var t = document.getElementById("total");
+        var a = document.getElementById("assignment");
+        if(a.checked == true && t.checked == true) {
+            t.checked = false;
+        }
+    }
+    function outputPotentialData() {
+        $("#potential_output").html(necessaryScore+": You need a "+necessaryScore+" / "+worth);
+    }
+    function outputPotentialDataA() {
+        $("#potential_output").html(potentialScore+"%\nIf you get a "+assignmentGoal+"/"+worth+" on your next assignment, you will have a "+potentialScore+"% in the class");
+    }
+
+</script>
+</body>
+</html>

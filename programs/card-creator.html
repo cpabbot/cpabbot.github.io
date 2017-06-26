@@ -1,0 +1,96 @@
+<html>
+<head>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="../css/pgCSS.css">
+    
+    <style>
+    #mOutput {
+      border: 7px groove #00ffff;
+      width: 300px;
+      height: 100px;
+      background-color: #e6e6e6;
+      text-align: center;
+    }
+    #mOutputP {
+      font-size:32px;
+      text-align: center;
+      margin: auto;
+      padding-top: 20px;
+     }
+    </style>
+</head>
+<body>
+<!--Game Murder Cards-->
+<h3>Murder Game Card Creator</h3>
+<div>
+     How many players? <input type="number" id="userInput" min="3" max="100" size="4">
+     <button id="inputM" onclick="test()">Run</button>
+     <button id="next">Next</button>
+    <br>
+     <!-- Output Box -->
+     <div id="mOutput"><p id="mOutputP"></p>
+        </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#inputM").click(function() { //#run
+        $("#next").html("Next");
+	   //Pick the Murderer, Detective, etc.
+	var numPlayers = document.getElementById("userInput").value; //prompt("How many players?");
+  numPlayers = numPlayers - 1;
+	var m = getRandomInt(0, numPlayers);
+	var d = getRandomInt(0, numPlayers);
+	while(d == m) {
+		d = getRandomInt(0, numPlayers);
+	}
+	var d2 = getRandomInt(0, numPlayers);
+	while(d2 == d || d2 == m) {
+		d = getRandomInt(0, numPlayers);
+	}
+
+	var i = 0;
+  var isNext = true;
+	$("#next").click(function() {
+    if(i<=numPlayers) {
+          if(isNext == true) {
+              isNext = false;
+              $("#next").html("blank");
+              if(i == m) {
+        		      $("#mOutputP").html("Murderer");
+        	    }
+        	    else if(i == d) {
+        		      $("#mOutputP").html("Detective");
+        	    }
+        	    else if(i == d2) {
+        		      $("#mOutputP").html("Detective");
+        	    }
+        	    else {
+        		      $("#mOutputP").html("Civilian");
+        	    }
+        	    i++;
+          }
+          else {
+              isNext = true;
+              $("#next").html("Next");
+              $("#mOutputP").html("");
+          }
+    }
+    else {
+      $("#mOutputP").html("");
+    }
+	 });
+  });
+	/*$("#blank").click(function() {
+		  $("#mOutputP").html("");
+    });*/
+});
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+</script>
+</body>
+</html>

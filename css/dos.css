@@ -1,0 +1,15 @@
+body {
+    background-color: #000;
+}
+
+@font-face{
+    font-family: "Dos";
+    src: url('../fonts/dos-font.ttf'),
+    url('../fonts/dos-font.ttf'); /* IE */
+}
+
+.dos-text {
+    font-family: "Dos";
+    font-size: 1.5em;
+    color: white;
+}
