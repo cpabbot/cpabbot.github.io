@@ -39,7 +39,7 @@ body, html {
 }
 
 /** DESKTOP **/
-@media only screen and (min-width: 700px) { /* maybe put below other css and remove !importants */
+@media only screen and (min-width: 850px) { /* maybe put below other css and remove !importants */
     .intro::before {
         content: none;
     }
@@ -49,16 +49,34 @@ body, html {
     .type {
         color: #333 !important;
     }
+    .intro__svg-path {
+        stroke: #D50000 !important;
+    }
+    .intro .intro__img {
+        width: 55vw;
+        height: auto;
+        max-height: 90vh;
+    }
 }
 
 .intro__img {
     opacity: 0;
     height: 90vh;
     position: absolute;
-    left: 10vw;
+    left: 3vw;
     bottom: -3vh;
     animation: fadeUp 2s 0.5s;
     animation-fill-mode: forwards;
+}
+
+.intro__svg {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.intro__svg-path {
+    stroke: transparent;
 }
 
 .intro__description {
@@ -68,15 +86,56 @@ body, html {
     z-index: 1;
 }
 
+.title {
+    color: #FFF;
+    font-family: 'Krona One', sans-serif;
+    font-size: 13vw;
+    text-align: right;
+}
+
 .type {
     width: 100%;
     text-align: right;
     
     color: #DDD;
-    font-size: 2.5em;
+    font-size: 8vw;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
     font-family: "Krona One", sans-serif;
+}
+
+@media (min-width: 400px) {
+    .title { font-size: calc(2rem + 4.7vw); }
+    .type { font-size: calc(0.7rem + 4.7vw); }
+}
+@media (min-width: 850px) {
+    .title { font-size: calc(2rem + 3vw); }
+    .type { font-size: calc(0.7rem + 3vw); }
+}
+
+.about {
+    height: 60vh;
+    background-color: #FFF; /*#BDBDBD;*/
+    text-align: center;
+}
+
+.about__col {
+    height: 100%;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.about__img {
+    position: relative;
+    height: 80%;
+    top: 10%;
+    opacity: 0;
+}
+
+.fadeDown {
+    animation: fadeDown 1s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes fadeLeft {
@@ -107,44 +166,6 @@ body, html {
         -ms-transform: translateY(0);
         transform: translateY(0);
     }
-}
-
-.intro__svg {
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-}
-
-.title {
-    color: #FFF;
-    font-family: 'Krona One', sans-serif;
-    font-size: 4em;
-    text-align: right;
-}
-
-.about {
-    height: 60vh;
-    background-color: #FFF; /*#BDBDBD;*/
-    text-align: center;
-}
-
-.about__col {
-    height: 100%;
-    width: 50%;
-    float: left;
-    text-align: center;
-}
-
-.about__img {
-    position: relative;
-    height: 80%;
-    top: 10%;
-    opacity: 0;
-}
-
-.fadeDown {
-    animation: fadeDown 1s;
-    animation-fill-mode: forwards;
 }
 
 @keyframes fadeDown {
