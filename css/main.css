@@ -19,16 +19,23 @@ body, html {
     margin: 0;
 }
 
-.button {
+.btn {
     text-decoration: none;
     cursor: pointer;
     
-    background-color: #DDD;
-    color: #444;
+    background-color: none;
+    color: #555;
+    border: solid #555;
+    transition: all 0.3s ease 0s;
     
     padding: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
+}
+
+.btn:hover {
+    background-color: #555;
+    color: #FFF;
 }
 
 .intro {
@@ -146,6 +153,17 @@ body, html {
     background-image:     -ms-linear-gradient(top, darkred, #ffffff); /* For pre-releases of IE 10*/
     background-image:      -o-linear-gradient(top, darkred, #ffffff); /* For old Opera (11.1 to 12.0) */
     background-image:         linear-gradient(to bottom, darkred, #ffffff); /* Standard syntax; must be last */
+}
+
+.main-nav-container {
+    position: relative;
+    text-align: center;
+    top: 50vh;
+}
+
+.main-nav-btn {
+    margin: 2vh 5vw;
+    display: inline-block;
 }
 
 .about__col {
