@@ -3,8 +3,10 @@
     width: 100%;
     top: 0;
     position: relative;
-    background-color: #00796B;
+    background-color: #8b0000; /*#00796B;*/
     box-shadow: 0px 4px 5px rgba(0,0,0,.4);
+    
+    background-image: url(../img/header.jpg);
 }
 
 .title--programs {
@@ -34,5 +36,5 @@
     height: 120px;
     width: 100%;
     top: 0;
-    background-color: #00796B;
+    background-color: #8b0000;
 }
