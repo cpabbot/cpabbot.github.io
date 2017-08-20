@@ -5,6 +5,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .section {
@@ -17,6 +18,10 @@ body, html {
     font-family: 'Montserrat', sans-serif;
     color: #555;
     margin: 0;
+}
+
+.hide {
+    display: none;
 }
 
 .btn {
@@ -36,6 +41,16 @@ body, html {
 .btn:hover {
     background-color: #555;
     color: #FFF;
+}
+
+.link {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.link:hover {
+    text-decoration: underline;
 }
 
 .intro {
@@ -133,32 +148,29 @@ body, html {
     .type { font-size: calc(0.7rem + 3vw); }
 }
 
-.about {
-    height: 120vh;
-    background-color: #FFF; /*#BDBDBD;*/
-    text-align: center;
-}
-
-.about__b1 {
-    width: 100%;
-    height: 0vh;
-    background-color: darkred;
-}
-
-.about__b2 {
+.intro2 {
     width: 100%;
     height: 70vh;
-    background-image: -webkit-linear-gradient(top, darkred, #ffffff); /* For Chrome and Safari */
-    background-image:    -moz-linear-gradient(top, darkred, #ffffff); /* For old Fx (3.6 to 15) */
-    background-image:     -ms-linear-gradient(top, darkred, #ffffff); /* For pre-releases of IE 10*/
-    background-image:      -o-linear-gradient(top, darkred, #ffffff); /* For old Opera (11.1 to 12.0) */
-    background-image:         linear-gradient(to bottom, darkred, #ffffff); /* Standard syntax; must be last */
+    background-color: #FFF; /*#BDBDBD;*/
+    text-align: center;
+    
+    background-image: -webkit-linear-gradient(top, #8b0000, #ffffff); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(top, #8b0000, #ffffff); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(top, #8b0000, #ffffff); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(top, #8b0000, #ffffff); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom, #8b0000, #ffffff); /* Standard syntax; must be last */
+}
+
+.nav {
+    height: 30vh;
+    width: 100%;
+    background-color: #FFF;
 }
 
 .main-nav-container {
     position: relative;
     text-align: center;
-    top: 50vh;
+    top: 0vh;
 }
 
 .main-nav-btn {
