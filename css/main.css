@@ -46,11 +46,15 @@ body, html {
 .link {
     text-decoration: none;
     cursor: pointer;
-    font-weight: 400;
+    /*font-weight: 400;*/
 }
 
 .link:hover {
     text-decoration: underline;
+}
+
+.p {
+    line-height: 24px;
 }
 
 .nav {
@@ -135,6 +139,7 @@ body, html {
     z-index: 1;
 }
 
+/*** MOBILE ***/
 .intro__svg-path {
     stroke: transparent;
 }
@@ -201,6 +206,7 @@ body, html {
 .main-nav-btn {
     margin: 2vh 5vw;
     display: inline-block;
+    opacity: 0; /* animates in */
 }
 
 .about__col {
@@ -217,8 +223,12 @@ body, html {
     opacity: 0;
 }
 
+.fadeUp {
+    animation: fadeUp 1s ease;
+    animation-fill-mode: forwards;
+}
 .fadeDown {
-    animation: fadeDown 1s;
+    animation: fadeDown 1s ease;
     animation-fill-mode: forwards;
 }
 
@@ -240,9 +250,9 @@ body, html {
 @keyframes fadeUp {
     from {
         opacity: 0;
-        -webkit-transform: translateY(20px);
-        -ms-transform: translateY(20px);
-        transform: translateY(20px);
+        -webkit-transform: translateY(15px);
+        -ms-transform: translateY(15px);
+        transform: translateY(15px);
     }
     to {
         opacity: 1;
