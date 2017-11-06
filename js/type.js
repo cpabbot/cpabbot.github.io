@@ -2,17 +2,17 @@ $(document).ready(function() {
     setInterval ('cursorAnimation()', 600);
     captionEl = $('.type-text');
     
-    var words = ['Creator', 'Designer', 'Coder', 'Pi Lover', 'Athlete', 'Programmer', 'Mathmetician', 'Innovator', 'Theorist', 'Geocacher'];
-    setTimeout(function() {
+    var words = ['Creator', 'Designer', 'Developer', 'Coder', 'Pi Lover', 'Athlete', 'Programmer', 'Mathmetician', 'Innovator', 'Theorist', 'Geocacher'];
+    setTimeout(function() { //delay
         loopTE(words, 0);
-    }, 3500);
+    }, 4500); // originally 3500
     
     /*$(window).scroll(function() {
         var offset = $('.about').offst().top;
         if($(window).scrollTop() < offset) {
             loopTE(words, 0);
         }
-    })*/ //might not be worth it, was going to use to reduce processing
+    })*/ //probably not worth it, was going to use to reduce processing, when user scrolls past intro, stop typing animation
     
 });
 

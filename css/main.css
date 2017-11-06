@@ -129,7 +129,8 @@ body, html {
     position: absolute;
     left: 3vw;
     bottom: -3vh;
-    animation: fadeUp 2s 0.5s;
+    
+    animation: fadeUp 2s 0.8s; /* not sure 0s or .8s which delay looks better */
     animation-fill-mode: forwards;
 }
 
@@ -137,6 +138,11 @@ body, html {
     height: 100%;
     width: 100%;
     z-index: 1;
+    
+    /* this delayed animation prevents svg from appearing before animate in */
+    opacity: 0;
+    animation: fade 0s 1.5s;
+    animation-fill-mode: forwards;
 }
 
 /*** MOBILE ***/
@@ -156,7 +162,26 @@ body, html {
     font-family: 'Krona One', sans-serif;
     font-size: 13vw;
     text-align: right;
+    
+    -webkit-animation: fadeLeft 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeLeft 2s; /* Firefox < 16 */
+        -ms-animation: fadeLeft 2s; /* Internet Explorer */
+         -o-animation: fadeLeft 2s; /* Opera < 12.1 */
+            animation: fadeLeft 2s;
 }
+
+/* fade */
+@keyframes fade{from{opacity:0}to{opacity:1}}@-moz-keyframes fadein{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@-ms-keyframes fadein{from{opacity:0}to{opacity:1}}@-o-keyframes fadein{from{opacity:0}to{opacity:1}}
+
+/* fade left */
+@keyframes fadeLeft{from{opacity:0;-webkit-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px)}to{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}}
+
+/* fade up */
+@keyframes fadeUp{from{opacity:0;-webkit-transform:translateY(15px);-ms-transform:translateY(15px);transform:translateY(15px)}to{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}}
+
+/* fade down */
+@keyframes fadeDown{from{opacity:0;-webkit-transform:translateY(-20px);-ms-transform:translateY(-20px);transform:translateY(-20px)}to{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}}
+
 
 .type {
     width: 100%;
@@ -167,6 +192,14 @@ body, html {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
     font-family: "Krona One", sans-serif;
+    
+    opacity: 0;
+    -webkit-animation: fade 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fade 2s; /* Firefox < 16 */
+        -ms-animation: fade 2s; /* Internet Explorer */
+         -o-animation: fade 2s; /* Opera < 12.1 */
+            animation: fade 2s 4s;
+    animation-fill-mode: forwards; /* stay after animation */
 }
 
 @media (min-width: 400px) {
@@ -230,51 +263,6 @@ body, html {
 .fadeDown {
     animation: fadeDown 1s ease;
     animation-fill-mode: forwards;
-}
-
-@keyframes fadeLeft {
-    from {
-        opacity: 0;
-        -webkit-transform: translateX(20px);
-        -ms-transform: translateX(20px);
-        transform: translateX(20px);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        -webkit-transform: translateY(15px);
-        -ms-transform: translateY(15px);
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeDown {
-    from {
-        opacity: 0;
-        -webkit-transform: translateY(-20px);
-        -ms-transform: translateY(-20px);
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-    }
 }
 
 .typed-cursor{

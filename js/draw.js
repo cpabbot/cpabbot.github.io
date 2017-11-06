@@ -8,8 +8,8 @@ $(document).ready(function() {
       anime({
         targets: pathEl,
         strokeDashoffset: [offset, 0],
-        duration: 2000,
-        delay: 1500,
+        duration: 1500,
+        delay: 1800, //1500
         easing: 'easeInOutSine',
         autoplay: true
       });
