@@ -1,3 +1,12 @@
+@supports (display: grid) {
+  .projects-main {
+    display: grid;
+    grid-template-columns: 1fr;
+      grid-row-gap: 50px;
+/*        repeat(auto-fit, minmax(280px, 1fr));*/
+  }
+}
+
 .project {
     position: relative;
     width: 100%;
@@ -81,6 +90,21 @@
     position: absolute;
     right: 0;
     bottom: 0;
+}
+
+@media (max-width: 500px) {
+    .project {
+        background-color: red;
+        padding: 0;
+    }
+    
+    .project__img {
+        width: 100%;
+    }
+    
+    .project__description {
+        display: none;
+    }
 }
 
 /*** old other thing ***/
