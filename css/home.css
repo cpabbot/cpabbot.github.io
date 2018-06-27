@@ -1,0 +1,233 @@
+.intro {
+    height: 100vh;
+    background-color: #f5f6f7;
+    background-attachment: fixed;
+}
+
+/** MOBILE **/
+.intro::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    filter: blur(3px);
+    background-color: rgba(35,35,35,.64);
+    z-index: 1;
+}
+
+/** DESKTOP **/
+@media only screen and (min-width: 850px) { /* maybe put below other css and remove !importants */
+    .intro::before {
+        content: none;
+    }
+    .title {
+        color: #777 !important;
+    }
+    .type {
+        color: #333 !important;
+    }
+    .intro__svg-path {
+        stroke: #D50000 !important;
+    }
+    .intro .intro__img {
+        width: 55vw;
+        height: auto;
+        max-height: 90vh;
+    }
+}
+
+.intro__img {
+    opacity: 0;
+    height: 90vh;
+    position: absolute;
+    left: 3vw;
+    bottom: -3vh;
+    
+    animation: fadeUp 2s 0.8s; /* not sure 0s or .8s which delay looks better */
+    animation-fill-mode: forwards;
+}
+
+.intro__svg {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    
+    /* this delayed animation prevents svg from appearing before animate in */
+    opacity: 0;
+    animation: fade 0s 1.5s;
+    animation-fill-mode: forwards;
+}
+
+/*** MOBILE ***/
+.intro__svg-path {
+    stroke: transparent;
+}
+
+.intro__description {
+    position: absolute;
+    top: 27vh;
+    right: 10vw;
+    z-index: 1;
+}
+
+.title {
+    color: #FFF;
+    font-family: 'Krona One', sans-serif;
+    font-size: 13vw;
+    text-align: right;
+    
+    -webkit-animation: fadeLeft 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadeLeft 2s; /* Firefox < 16 */
+        -ms-animation: fadeLeft 2s; /* Internet Explorer */
+         -o-animation: fadeLeft 2s; /* Opera < 12.1 */
+            animation: fadeLeft 2s;
+}
+
+.type {
+    width: 100%;
+    text-align: right;
+    
+    color: #DDD;
+    font-size: 8vw;
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    font-family: "Krona One", sans-serif;
+    
+    opacity: 0;
+    -webkit-animation: fade 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fade 2s; /* Firefox < 16 */
+        -ms-animation: fade 2s; /* Internet Explorer */
+         -o-animation: fade 2s; /* Opera < 12.1 */
+            animation: fade 2s 3.2s;
+    animation-fill-mode: forwards; /* stay after animation */
+}
+
+@media (min-width: 400px) {
+    .title { font-size: calc(2rem + 4.7vw); }
+    .type { font-size: calc(0.7rem + 4.7vw); }
+}
+@media (min-width: 850px) {
+    .title { font-size: calc(2rem + 3vw); }
+    .type { font-size: calc(0.7rem + 3vw); }
+}
+
+.about--1 {
+    width: 100%;
+    height: 100vh;
+    background-color: #FFF; /*#BDBDBD;*/
+    text-align: center;
+    
+    background-image: -webkit-linear-gradient(top, #8b0000, #ffffff); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(top, #8b0000, #ffffff); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(top, #8b0000, #ffffff); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(top, #8b0000, #ffffff); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to bottom, #8b0000, #ffffff); /* Standard syntax; must be last */
+}
+
+.about-desc--1 {
+    font-family: "Krona One", sans-serif;
+    font-size: 6em;
+    color: #333;
+    margin: 0;
+    padding: 100px 50px;
+    line-height: 150%;
+}
+
+.about-desc--1::first-line {
+    color: #fff;
+}
+
+.emphasis {
+    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
+    display: inline-block;
+}
+
+.e--1 {
+    transform: rotate(-10deg);
+    color: deeppink;
+    background-color: yellow;
+/*    color: aqua;*/
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    transition: transform 400ms ease, color 1500ms ease 500ms, letter-spacing 600ms ease 1000ms, background-color 1s ease 1500ms, font-weight 1s ease 2000ms;
+}
+
+.e--2 {
+    letter-spacing: 0.8em;
+    padding-top: 50px;
+    color: darkred;
+    font-weight: bold;
+}
+
+.e--1.fix {
+    transform: rotate(0);
+    color: #333;
+    background-color: transparent;
+    letter-spacing: 0em;
+    font-family: "Krona One", sans-serif;
+    font-weight: normal;
+}
+
+
+
+
+.section--nav {
+    height: 30vh;
+    width: 100%;
+    background-color: #FFF;
+}
+
+.main-nav-container {
+    position: relative;
+    text-align: center;
+    top: 0vh;
+}
+
+.main-nav-btn {
+    margin: 2vh 5vw;
+    display: inline-block;
+    opacity: 0; /* animates in */
+}
+
+
+
+
+
+
+.about__col {
+    height: 100%;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.about__img {
+    position: relative;
+    height: 80%;
+    top: 10%;
+    opacity: 0;
+}
+
+.typed-cursor{
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
