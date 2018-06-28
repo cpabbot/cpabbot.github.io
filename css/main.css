@@ -49,7 +49,7 @@ body, html {
     /*font-weight: 400;*/
 }
 
-.link:hover {
+.link--underline:hover {
     text-decoration: underline;
 }
 

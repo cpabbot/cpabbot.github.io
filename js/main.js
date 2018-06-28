@@ -1,3 +1,6 @@
+var vHeight = $('.about--1').offset().top;
+var vWidth = $(window).width();
+
 $(document).ready(function() {
     
     $(window).scroll(function () {
@@ -14,12 +17,14 @@ $(document).ready(function() {
         //element.removeClass("animateMe");
         }*/
         
-        var gradientOffset = $('.about--1').offset().top;
+//        alert(vWidth);
         
-        if($(window).scrollTop() > gradientOffset) {
+        $(".about-desc--1").css({'opacity': ($(window).scrollTop() - (1/4*vHeight))/(vWidth/2) });
+        
+        if($(window).scrollTop() > vHeight) {
             $(".e--1").addClass("fix");
         }
-        if($(window).scrollTop() > gradientOffset + 100) {
+        if($(window).scrollTop() > vHeight + 100) {
             // Fade in main nav buttons (bottom of home page)
             $('.main-nav-btn').addClass("fadeUp");
         }
