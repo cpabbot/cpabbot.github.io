@@ -5,6 +5,7 @@ body {
     padding: 0;
 }
 
+/*** HEADER ***/
 .header {
     position: absolute;
     height: 10vh;
@@ -17,6 +18,10 @@ body {
     padding-left: 80px;
 }
 
+
+
+/*** PROJECT ***/
+
 .project {
     position: absolute;
     width: 100%;
@@ -25,29 +30,40 @@ body {
     
     text-align: center;
     background-color: #fff;
-    background-image: url("https://ak1.picdn.net/shutterstock/videos/29466001/thumb/1.jpg");
+    background-image: url(../img/projects-background.jpg);
+    background-size: cover;
     overflow: hidden;
 }
 
 .project__img {
     width: 50vw;
+    min-width: 500px;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
     
     position: absolute;
     left: calc(50% - 25vw);
     top: 15%;
     
-/*    filter: brightness(0.3);*/
+/*    filter: brightness(0.7);*/
 /*    opacity: 0.7;*/
-    filter: contrast(0.7) blur(1px);
+    filter: grayscale(0.5) brightness(0.9) blur(2px);
+/*    filter: contrast(0.7) blur(1px);*/
 /*    filter: blur(2px);*/
     
-    transition: all 1000ms ease-in;
+    transition: all 400ms ease-in;
+}
+
+@media (max-width: 900px) {
+    .project__img {
+        left: calc(50% - 250px);
+    }
 }
 
 .project__img.exit {
-    transform: translate(-70vw);
-    opacity: 0;
+    transform: translate(-20vw) scale(0.9, 0.9);
+}
+.project__img.enter {
+    transform: translate(20vw) scale(1.1, 1.1);
 }
 
 .project__date {
@@ -67,11 +83,16 @@ body {
     top: 69%;
     margin: auto;
     text-align: left;
-    transition: all 500ms ease-in;
+    transition: all 300ms ease-in;
 }
 
 .project__description.exit {
-    transform: translateY(20vh);
+    transform: translateY(10vh);
+}
+.project__description.enter {
+    transform: translateY(10vh);
+}
+.exit, .enter {
     opacity: 0;
 }
 
@@ -85,11 +106,22 @@ body {
     z-index: 1;
 /*    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);*/
     transition: all 200ms;
+    
+    background: rgb(0,100,121);
+    background: linear-gradient(90deg, rgba(0,100,121,0.8) 0%, rgba(255,255,255,1) 52%, rgba(162,0,0,0.8) 100%);
+    
+    background-repeat: no-repeat;
+    background-size: 140% 0.2em;
+    background-position: 0 88%;
 }
 
 .project__title:hover {
     text-decoration: none;
-    color: #555;
+/*    color: #555;*/
+/*    background-size: 100% 100%;*/
+/*    color: #fff;*/
+    background-position: 100% 88%;
+    background-size: 180% 0.25em;
 }
 
 .project__title2 {
@@ -101,6 +133,9 @@ body {
     line-height: 100%;
     margin: 0;
 }
+
+
+
 
 .card {
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
@@ -122,33 +157,34 @@ body {
 }
 
 .link--code {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    line-height: 2em;
+    color: #0000EE;
 }
 
-@media (max-width: 500px) {
-    .project {
-        background-color: red;
-        padding: 0;
-    }
-    
-    .project__img {
-        width: 100%;
-    }
-    
-    .project__description {
-        display: none;
-    }
+.link--code:hover {
+/*    color: #0000BB;*/
+    text-decoration: underline;
 }
 
-/*** old other thing ***/
 
-.project__background {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    
-    background-size: cover;
+
+
+
+/* enter from right, reverse to exit */
+@keyframes enterRight{from{opacity:0;-webkit-transform:translateX(20vw);-ms-transform:translateX(20vw);transform:translateX(20vw)}to{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}}
+/* enter from left, reverse to exit */
+@keyframes enterLeft{from{opacity:0;-webkit-transform:translateX(-20vw);-ms-transform:translateX(-20vw);transform:translateX(-20vw)}to{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}}
+.enterRight {
+    animation: enterRight 1s ease;
+}
+.exitRight {
+    animation: enterRight 1s ease;
+    animation-direction: reverse;
+}
+.enterLeft {
+    animation: enterRight 1s ease;
+}
+.exitLeft {
+    animation: enterRight 1s ease;
+    animation-direction: reverse;
 }
