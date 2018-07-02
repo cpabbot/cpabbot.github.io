@@ -1,8 +1,10 @@
 var index = 0;
-var numProjects = 4;
+var numProjects = 7;
 var animating = false;
 
 $(document).ready(function() {
+    
+    $(".js-fade").addClass("fadeUp"); // must be remove right before animation
     
     /*** allows the user to scroll through projects ***/
     $('.project').bind('mousewheel', function(e) {
@@ -17,6 +19,7 @@ $(document).ready(function() {
         }
     });
     
+    /*** controls the cool underline effect for the project title ***/
     $( ".project__title" ).mousemove(function( event ) {
         var x = (event.pageX - $('.project__title').offset().left) / $(".project__title").width() * 100;
         var fraction = (1-(x/100))*100;
@@ -24,14 +27,27 @@ $(document).ready(function() {
         // 180% is left, 0% is right
         $( ".project__title").css("background-position", fraction + "% 88%");
     });
-    
     $( ".project__title" ).mouseleave(function() {
         $( ".project__title").css("background-position", "0 88%");
     });
     
+//    $(".project__img").click(function() {
+////        $(".project:not(.project__img)").css("filter", "brightness(0.1)");
+//        $(".overlay").removeClass("hide");
+//        $(".project__img").addClass("unfilter");
+//    });
+//    
+//    $(".overlay").click(function() {
+//        $(".overlay").addClass("hide");
+//        $(".project__img").removeClass("unfilter");
+//    });
+    
 });
 
 function nextProject() {
+    if(index == 0) {
+        $(".js-fade").removeClass("fadeUp");
+    }
     if(index < (2*numProjects-2)) { // must be less than (2 * #projects - 2)
         prepNextProject();
         animating = true;
