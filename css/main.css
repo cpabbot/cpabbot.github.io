@@ -57,6 +57,7 @@ body, html {
     line-height: 24px;
 }
 
+/*********************** HEADER + NAVIGATION ********************************/
 .header {
     position: relative;
     height: 100px;
@@ -138,6 +139,33 @@ body, html {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media (max-width: 700px) {
+    .header {
+        text-align: center;
+    }
+    
+    .subtitle {
+        left: 0;
+        line-height: normal;
+        top: 20px;
+    }
+    
+    .nav {
+        right: 0;
+        width: 100%;
+        line-height: normal;
+        height: auto;
+        top: auto;
+        bottom: 15px;
+    }
+    
+    .nav-link {
+        padding: 15px;
+    }
+}
+
+/**************************************************************/
 
 /* fade */
 @keyframes fade{from{opacity:0}to{opacity:1}}@-moz-keyframes fadein{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadein{from{opacity:0}to{opacity:1}}@-ms-keyframes fadein{from{opacity:0}to{opacity:1}}@-o-keyframes fadein{from{opacity:0}to{opacity:1}}

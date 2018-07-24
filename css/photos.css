@@ -1,0 +1,15 @@
+.widget--big {
+    display: none;
+}
+
+
+
+@media (min-width: 550px) {
+    .widget--small {
+        display: none;
+    }
+    
+    .widget--big {
+        display: block;
+    }
+}
