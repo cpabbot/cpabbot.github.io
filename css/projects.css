@@ -6,16 +6,36 @@ body {
 }
 
 /*** HEADER ***/
-.header {
+.header--old {
     position: absolute;
     height: 10vh;
     width: 100%;
     background-color: darkred;
 }
+.title--projects--old {
+    color: #fff;
+    padding-left: 80px;
+}
+
+
+.header--projects {
+    background-color: #8b0000;
+}
 
 .title--projects {
     color: #fff;
-    padding-left: 80px;
+}
+
+.nav-link--projects {
+    color: #BBB;
+}
+
+.nav-link--projects:hover {
+    color: #FFF;
+}
+
+.nav-link--active--projects {
+    color: #FFF;
 }
 
 
@@ -23,10 +43,16 @@ body {
 /*** PROJECT ***/
 
 .project {
+/*
     position: absolute;
     width: 100%;
     height: 90vh;
     bottom: 0;
+*/
+    
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px);
     
     text-align: center;
     background-color: #fff;

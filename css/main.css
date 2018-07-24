@@ -57,7 +57,31 @@ body, html {
     line-height: 24px;
 }
 
-.nav {
+.header {
+    position: relative;
+    height: 100px;
+    width: 100%;
+/*    background-color: #fff;*/
+}
+
+.subtitle {
+    font-family: 'Montserrat', sans-serif;
+    color: darkred;
+    font-size: 2em;
+    margin: 0;
+    line-height: 100px;
+    position: relative;
+    left: 5%;
+    display: inline-block;
+}
+
+.gradient-color {
+    background: -webkit-linear-gradient(#fff, #8b0000, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav--old {
     position: absolute;
     right: 3vw;
     top: 3vh;
@@ -67,6 +91,31 @@ body, html {
     font-size: 0.9rem;
 }
 
+.nav-link--old {
+    text-decoration: none;
+    color: #DDD;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: color 100ms;
+}
+
+.nav-link--old:hover {
+    color: #BBB;
+}
+
+.nav {
+    position: absolute;
+    right: 5%;
+    height: 100%;
+    line-height: 100px;
+    text-align: center;
+    color: #DDD;
+    font-weight: 600;
+    font-size: 0.9rem;
+    
+    top: 0;
+}
+
 .logo {
     /*width: 17vw;*/
     width: 170px;
@@ -74,13 +123,20 @@ body, html {
 
 .nav-link {
     text-decoration: none;
-    color: #DDD;
+    color: #BBB;
     font-weight: 600;
     font-size: 0.9rem;
+    transition: color 100ms;
 }
 
 .nav-link:hover {
-    color: #BBB;
+    color: #777;
+}
+
+.nav-link--active {
+    background: -webkit-linear-gradient(#8b0000, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* fade */
