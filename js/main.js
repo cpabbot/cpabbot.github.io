@@ -23,6 +23,7 @@ $(document).ready(function() {
         
         if($(window).scrollTop() > vHeight) {
             $(".e--1").addClass("fix");
+            $(".about-right").addClass("wipe");
         }
         if($(window).scrollTop() > vHeight + 100) {
             // Fade in main nav buttons (bottom of home page)

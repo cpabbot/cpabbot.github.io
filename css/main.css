@@ -140,6 +140,30 @@ body, html {
   -webkit-text-fill-color: transparent;
 }
 
+/****** Dark Theme Header*****/
+
+.header--dark {
+    background-color: #8b0000;
+}
+
+.title--dark {
+    color: #fff;
+}
+
+.nav-link--dark {
+    color: #BBB;
+}
+
+.nav-link--dark:hover {
+    color: #FFF;
+}
+
+.nav-link--active--dark {
+    color: #FFF;
+}
+
+/******************************/
+
 @media (max-width: 700px) {
     .header {
         text-align: center;

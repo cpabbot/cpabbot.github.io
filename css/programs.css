@@ -1,3 +1,11 @@
+.header--programs {
+    position: fixed;
+    background-color: #fff;
+    z-index: 1;
+    border-bottom: solid #ccc 1.5px;
+}
+
+
 .programs-header {
     height: 40vh;
     width: 100%;
@@ -50,6 +58,8 @@
     width: 100%;
     top: 0;
     background-color: #8b0000;
+/*    background: linear-gradient(90deg, rgb(0,100,121) 0%, rgb(162,0,0) 100%);*/
+    background: linear-gradient(90deg, rgb(162,0,0) 0%, rgb(0,100,121) 100%);
 }
 
 .card__title {
