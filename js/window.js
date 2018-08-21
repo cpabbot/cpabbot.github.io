@@ -12,9 +12,11 @@ $(document).ready(function() {
     });
     
     // CLOSE WINDOW
-    $('.blur-background').click(function() {
-        $('.window').addClass('hide');
-        $('.blur-background').addClass('hide');
-    });
+    $('.blur-background').click(closeWindow);
     
 });
+
+function closeWindow() {
+    $('.window').addClass('hide');
+    $('.blur-background').addClass('hide');
+}

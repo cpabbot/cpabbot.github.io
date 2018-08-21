@@ -69,14 +69,28 @@
     display: inline-block;
     margin-left: 0.8em;
     bottom: 0px;
+    transition: all 1000ms;
+}
+
+.card__title:after {
+    content: '';
+    width: 0px;
+    height: 2px;
+    display: block;
+    background: #fff;
+    transition: 300ms;
+}
+
+.card__title:hover:after {
+    width: 100%;
 }
 
 .blur-background {
     position: fixed;
     height: 100%;
     width: 100%;
-    z-index: 1;
-    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    background-color: rgba(0,0,0,0.7);
 }
 
 .window {
@@ -89,8 +103,46 @@
     padding: 2em;
 }
 
+@media (max-width: 1000px) {
+    .window {
+        width: 94vw;
+        height: 94vh;
+        left: 3vw;
+        top: 2vh;
+    }
+}
+
 .window__frame {
     width: 100%;
     height: 100%;
     border: none;
+}
+
+/* credit Johan /*
+/* https://codepen.io/brissmyr/pen/egidw */
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+    transition: opacity 150ms;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }
