@@ -43,13 +43,6 @@ body {
 /*** PROJECT ***/
 
 .project {
-/*
-    position: absolute;
-    width: 100%;
-    height: 90vh;
-    bottom: 0;
-*/
-    
     position: relative;
     width: 100%;
     height: calc(100vh - 100px);
@@ -107,7 +100,8 @@ body {
     
     left: 15%;
     right: 10%;
-    top: 69%;
+/*    top: 69%;*/
+    bottom: 3vh;
     margin: auto;
     text-align: left;
     transition: all 300ms ease-in;
@@ -142,6 +136,12 @@ body {
     background-position: 0 88%;
 }
 
+@media (max-width: 800px) {
+    .project__title {
+        font-size: calc(6vw + 1rem);
+    }
+}
+
 .project__title:hover {
     text-decoration: none;
 /*    color: #555;*/
@@ -164,6 +164,15 @@ body {
 
 .indent {
     text-indent: 50px;
+}
+
+@media (max-width: 600px) {
+    .project__img {
+        top: 7vh;
+    }
+    .project__description {
+/*        bottom: 8vh;*/
+    }
 }
 
 
