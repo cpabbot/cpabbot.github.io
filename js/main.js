@@ -19,7 +19,7 @@ $(document).ready(function() {
         
 //        alert(vWidth);
         
-        $(".about-desc--1").css({'opacity': ($(window).scrollTop() - (1/4*vHeight))/(vWidth/2) });
+        $(".about-desc--1").css({'opacity': ($(window).scrollTop() - (1/4*vHeight/4))/(vWidth/2) });
         
         if($(window).scrollTop() > vHeight) {
             $(".e--1").addClass("fix");
