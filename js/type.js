@@ -2,7 +2,7 @@ $(document).ready(function() {
     setInterval ('cursorAnimation()', 600);
     captionEl = $('.type-text');
     
-    var words = ['Creator', 'Designer', 'Developer', 'Coder', 'Pi Lover', 'Athlete', 'Programmer', 'Mathmetician', 'Innovator', 'Theorist', 'Geocacher'];
+    var words = ['Creator', 'Designer', 'Developer', 'Theorist', 'Coder', 'Athlete', 'Programmer', 'Mathmetician', 'Innovator', 'Pi Lover', 'Geocacher'];
     setTimeout(function() { //delay
         loopTE(words, 0);
     }, 4500); // originally 3500

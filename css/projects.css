@@ -48,8 +48,8 @@ body {
     height: calc(100vh - 100px);
     
     text-align: center;
-    background-color: #fff;
-    background-image: url(../img/projects-background.jpg);
+    background-color: #8b00000f;
+/*    background-image: url(../img/projects-background.jpg);*/
     background-size: cover;
     overflow: hidden;
 }
@@ -57,17 +57,14 @@ body {
 .project__img {
     width: 50vw;
     min-width: 500px;
-    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);
+/*    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.5);*/
     
     position: absolute;
     left: calc(50% - 25vw);
     top: 15%;
     
-/*    filter: brightness(0.7);*/
-/*    opacity: 0.7;*/
-    filter: grayscale(0.5) brightness(0.9) blur(2px);
-/*    filter: contrast(0.7) blur(1px);*/
-/*    filter: blur(2px);*/
+/*    filter: grayscale(0.5) brightness(0.9) blur(2px);*/
+    filter: grayscale(0.5) contrast(0.7) brightness(1.1) blur(4px);
     
     transition: all 400ms ease-in, filter 200ms;
 }
