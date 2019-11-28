@@ -1,5 +1,5 @@
 var index = 0;
-var numProjects = 7;
+var numProjects = 8;
 var animating = false;
 
 $(document).ready(function() {

@@ -1,5 +1,7 @@
-var vHeight = $('.about--1').offset().top;
+//var vHeight = $('.about--1').offset().top; update 3.1
+var vHeight = $('.home-two').offset().top;
 var vWidth = $(window).width();
+var b = 1;
 
 $(document).ready(function() {
     
@@ -25,13 +27,19 @@ $(document).ready(function() {
             $(".e--1").addClass("fix");
             $(".about-right").addClass("wipe");
         }
-        if($(window).scrollTop() > vHeight + 100) {
+        if($(window).scrollTop() > 3*vHeight/4) { // update 3.1 from vHeight + 100
             // Fade in main nav buttons (bottom of home page)
             $('.main-nav-btn').addClass("fadeUp");
         }
         else {
-            //alert($(window).scrollTop());
+//            alert($(window).scrollTop());
         }
+        
+//        if($(window).scrollTop() % 3 == 0) {
+//            b = 1.0 - $(window).scrollTop()/vHeight;
+//            if(b < 0.4) { b = 0.4 }
+//            $(".intro").css("filter", "brightness(" + b + ")");
+//        }
         
         
     });

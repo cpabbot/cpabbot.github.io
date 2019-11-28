@@ -1,10 +1,13 @@
 .intro {
     height: 100vh;
     background-color: #f5f6f7;
+    background: url("../img/Cameron2.jpeg") no-repeat center center;
     background-attachment: fixed;
+    background-size: cover;
+/*    position: fixed;*/
 }
 
-/** MOBILE **/
+/** MOBILE **/  
 .intro::before {
     content: "";
     position: absolute;
@@ -13,30 +16,9 @@
     width: 100%;
     top: 0;
     left: 0;
-    filter: blur(3px);
-    background-color: rgba(35,35,35,.64);
+/*    filter: blur(3px);*/
+    background-color: rgba(35,35,35,.4);
     z-index: 1;
-}
-
-/** DESKTOP **/
-@media only screen and (min-width: 850px) { /* maybe put below other css and remove !importants */
-    .intro::before {
-        content: none;
-    }
-    .title {
-        color: #777 !important;
-    }
-    .type {
-        color: #333 !important;
-    }
-    .intro__svg-path {
-        stroke: #D50000 !important;
-    }
-    .intro .intro__img {
-        width: 55vw;
-        height: auto;
-        max-height: 90vh;
-    }
 }
 
 .intro__img {
@@ -68,27 +50,61 @@
 
 .intro__description {
     position: absolute;
-    top: 27vh;
-    right: 10vw;
-    z-index: 1;
+    bottom: 10vh;
+    width: 100%;
+    text-align: center;
+/*    right: 10vw;*/
+/*    z-index: 1;*/
 }
 
 .title {
     color: #FFF;
     font-family: 'Krona One', sans-serif;
-    font-size: 13vw;
-    text-align: right;
+    font-family: 'Kameron', serif;
+    font-size: 15vw;
     
     -webkit-animation: fadeLeft 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadeLeft 2s; /* Firefox < 16 */
         -ms-animation: fadeLeft 2s; /* Internet Explorer */
          -o-animation: fadeLeft 2s; /* Opera < 12.1 */
             animation: fadeLeft 2s;
+    
+    letter-spacing: 5vw;
+    word-break: break-all;
+    font-size: 12vw;
+    padding: 0 5vw;
+    width: 100%;
+    mix-blend-mode: difference;
+    font-weight: 700;
+    position: absolute;
+    text-align: center;
+    z-index: 9;
+}
+
+.title-1 {
+    top: 0vh;
+/*    width: 100%*/
+/*    padding: 0 5vw;*/
+}
+
+.title-2 {
+    bottom: 0vh;
+/*    width: 100%;*/
+/*    padding: 0 5vw;*/
+}
+
+.title-1, .title-2 {
+    display: none;
+}
+
+.title-mobile {
+    font-size: calc(6vw + 6rem);
+    text-align: left;
+/*    margin: 5vw 5vw;*/
 }
 
 .type {
     width: 100%;
-    text-align: right;
     
     color: #DDD;
     font-size: 8vw;
@@ -105,12 +121,45 @@
 }
 
 @media (min-width: 400px) {
-    .title { font-size: calc(2rem + 4.7vw); }
-    .type { font-size: calc(0.7rem + 4.7vw); }
+/*    .title { font-size: calc(2rem + 4.7vw); }*/
+/*    .type { font-size: calc(0.7rem + 4.7vw); }*/
 }
 @media (min-width: 850px) {
-    .title { font-size: calc(2rem + 3vw); }
-    .type { font-size: calc(0.7rem + 3vw); }
+/*    .title { font-size: calc(2.5rem + 3vw); }*/
+/*    .type { font-size: calc(0.7rem + 3vw); }*/
+    
+    .title {
+        font-size: 12vw;
+    }
+    
+    .title-mobile {
+        display: none;
+    }
+    .title-1, .title-2 {
+        display: block;
+    }
+}
+
+/** DESKTOP **/
+@media only screen and (min-width: 850px) { /* maybe put below other css and remove !importants */
+    .intro::before {
+        content: none;
+    }
+    .title {
+        color: #fff !important;
+        position: fixed;
+    }
+    .type {
+        color: #222 !important;
+    }
+    .intro__svg-path {
+        stroke: #D50000 !important;
+    }
+    .intro .intro__img {
+        width: 55vw;
+        height: auto;
+        max-height: 90vh;
+    }
 }
 
 
@@ -131,146 +180,62 @@
 
 /**********************************************************/
 
-
-
-.about--1 {
-    width: 100%;
-/*    height: 100vh;*/
-    background-color: #FFF; /*#BDBDBD;*/
-    text-align: center;
-    overflow: visible;
-    
-    background-image: -webkit-linear-gradient(top, #8b0000, #ffffff); /* For Chrome and Safari */
-    background-image:    -moz-linear-gradient(top, #8b0000, #ffffff); /* For old Fx (3.6 to 15) */
-    background-image:     -ms-linear-gradient(top, #8b0000, #ffffff); /* For pre-releases of IE 10*/
-    background-image:      -o-linear-gradient(top, #8b0000, #ffffff); /* For old Opera (11.1 to 12.0) */
-    background-image:         linear-gradient(to bottom, #8b0000, #ffffff); /* Standard syntax; must be last */
+.home-two {
+    height: 100vh;
+    background-color: #0005;
+/*    background-color: #fff0;*/
+/*    top: 100vh;*/
 }
 
-.about-right {
+.home-svg {
     position: absolute;
-    left: 50%;
     top: 0;
-    width: 50%;
-    height: 100%;
-    background-image:         linear-gradient(to bottom, #000, #ffffff); /* Standard syntax; must be last */
-    width: 0;
-}
-
-.wipe {
-/*    width: 50%;*/
-    animation: linearwipe 400ms 2s;
-    animation-fill-mode: forwards;
-}
-@keyframes linearwipe {
-    from { width: 0; }
-    to { width: 50%; }
-}
-
-/*
-.about--1::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -70px;
-    border-top: solid transparent 70px;
-    border-right: solid #8b0000 calc(50vw - 8px);
-    
-    border-right: solid #8b0000 200px;
-    right: calc(50vw - 8px);
-}
-.about--1::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: -70px;
-    border-top: solid transparent 70px;
-    border-left: solid #8b0000 calc(50vw - 8px);
-    
-    border-left: solid #8b0000 200px;
-    left: calc(50vw - 9px);
-}
-*/
-
-.about-desc--1 {
-    font-family: "Krona One", sans-serif;
-/*    font-size: calc(5vw + 1em);*/
-    font-size: calc(5.5vw + 0.5em);
-    color: #333;
-    margin: 0;
-    padding: 100px 50px;
-    line-height: 150%;
-/*    mix-blend-mode: luminosity;*/
-    z-index: 1;
-}
-
-@media (max-width: 1100px) {
-    .about-desc--1 {
-        font-size: calc(2vw + 3em);
-    }
-}
-
-@media (max-width: 700px) {
-    .about-desc--1 {
-        font-size: calc(5vw + 1.5em);
-        padding: 100px 7vw;
-    }
-}
-
-.about-desc--1::first-line {
-    color: #fff;
-}
-
-.emphasis {
-    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
-    display: inline-block;
-}
-
-.e--1 {
-    transform: rotate(-10deg);
-    color: deeppink;
-    background-color: yellow;
-/*    color: aqua;*/
-    font-weight: bold;
-    letter-spacing: 0.2em;
-    transition: transform 400ms ease, color 1500ms ease 500ms, letter-spacing 600ms ease 1000ms, background-color 1s ease 1500ms, font-weight 1s ease 2000ms;
-}
-
-.e--2 {
-    letter-spacing: 5vw;
-    padding-top: 5vh;
-    color: darkred;
-    font-weight: bold;
-}
-
-@media (max-width: 600px) {
-    .e--2 {
-        letter-spacing: 3vw;
-    }
-}
-
-.e--1.fix {
-    transform: rotate(0);
-    color: #333;
-    background-color: transparent;
-    letter-spacing: 0em;
-    font-family: "Krona One", sans-serif;
-    font-weight: normal;
-}
-
-
-
-
-.section--nav {
-    min-height: 20vh;
     width: 100%;
-    background-color: #FFF;
+    height: 100vh;
+/*    background-color: #0000;*/
+    opacity: 0;
+}
+
+.home-graphic {
+    fill: url(#home-svg-gradient) !important;
+    fill: #777 !important;
+}
+
+.divider {
+    height: 30vh;
+    width: 100%;
+    background-color: #8b0000;
+    background-image: -webkit-linear-gradient(left, #700000, #222); /* For Chrome and Safari */
+    background-image:    -moz-linear-gradient(left, #700000, #222); /* For old Fx (3.6 to 15) */
+    background-image:     -ms-linear-gradient(left, #700000, #222); /* For pre-releases of IE 10*/
+    background-image:      -o-linear-gradient(left, #700000, #222); /* For old Opera (11.1 to 12.0) */
+    background-image:         linear-gradient(to right, #700000, #222); /* Standard syntax; must be last */
+    
+    height: 0;
+    width: 0;
+/*
+    border-top: 100vh solid black;
+    border-bottom: 100vh solid transparent;
+    border-right: 100vh solid black;
+    border-left: 100vh solid transparent;
+*/
 }
 
 .main-nav-container {
     position: relative;
     text-align: center;
     top: 0vh;
+    
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 50vh;
+    transform: translateY(-50%);
+    
+    border: solid 10px #700000;
+    border-left: none;
+    border-right: none;
+    padding: 50px;
 }
 
 .main-nav-btn {
@@ -278,14 +243,6 @@
     display: inline-block;
     opacity: 0; /* animates in */
   -webkit-transition:0.5s;
-    
-/*
-    width: 33%;
-    margin: 0;
-    padding: 0;
-    height: 200px;
-    line-height: 200px;
-*/
 }
 
 
@@ -318,53 +275,4 @@
 
 .main-nav-btn:hover::after, .main-nav-btn:hover::before {
   -webkit-transform: scale(1);
-}
-
-
-.section--contact {
-    background-color: #333;
-    width: 100%;
-    height: 200px;
-}
-
-
-
-
-
-
-
-.about__col {
-    height: 100%;
-    width: 50%;
-    float: left;
-    text-align: center;
-}
-
-.about__img {
-    position: relative;
-    height: 80%;
-    top: 10%;
-    opacity: 0;
-}
-
-.typed-cursor{
-	opacity: 1;
-	-webkit-animation: blink 0.7s infinite;
-	-moz-animation: blink 0.7s infinite;
-	animation: blink 0.7s infinite;
-}
-@keyframes blink{
-	0% { opacity:1; }
-	50% { opacity:0; }
-	100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-	0% { opacity:1; }
-	50% { opacity:0; }
-	100% { opacity:1; }
-}
-@-moz-keyframes blink{
-	0% { opacity:1; }
-	50% { opacity:0; }
-	100% { opacity:1; }
 }
