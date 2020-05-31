@@ -19,23 +19,23 @@ body {
 
 
 .header--projects {
-    background-color: #8b0000;
+    /* background-color: #8b0000; */
 }
 
 .title--projects {
-    color: #fff;
+    /* color: #fff; */
 }
 
 .nav-link--projects {
-    color: #BBB;
+    /* color: #BBB; */
 }
 
 .nav-link--projects:hover {
-    color: #FFF;
+    /* color: #FFF; */
 }
 
 .nav-link--active--projects {
-    color: #FFF;
+    /* color: #FFF; */
 }
 
 
@@ -48,9 +48,9 @@ body {
     height: calc(100vh - 100px);
     
     text-align: center;
-    background-color: #8b00000f;
+    /* background-color: #8b00000f; */
 /*    background-image: url(../img/projects-background.jpg);*/
-    background-size: cover;
+    /* background-size: cover; */
     overflow: hidden;
 }
 
@@ -61,10 +61,10 @@ body {
     
     position: absolute;
     left: calc(50% - 25vw);
-    top: 15%;
+    top: 5%;
     
 /*    filter: grayscale(0.5) brightness(0.9) blur(2px);*/
-    filter: grayscale(0.5) contrast(0.7) brightness(1.1) blur(4px);
+    filter: grayscale(0.4) contrast(0.7) brightness(1.1) blur(2px);
     
     transition: all 400ms ease-in, filter 200ms;
 }
@@ -97,8 +97,8 @@ body {
     
     left: 15%;
     right: 10%;
-/*    top: 69%;*/
-    bottom: 3vh;
+   top: 60%;
+    /* bottom: 3vh; */
     margin: auto;
     text-align: left;
     transition: all 300ms ease-in;
@@ -177,7 +177,7 @@ body {
 .project__arrow {
     width: 40px;
     position: absolute;
-    bottom: 8vh;
+    bottom: 23vh;
 }
 
 .project__arrow--back {
