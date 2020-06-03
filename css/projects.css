@@ -163,9 +163,21 @@ body {
     text-indent: 50px;
 }
 
+@media (max-width: 700px) {
+    .project__img {
+        top: 0;
+    }
+    .project__description {
+/*        bottom: 8vh;*/
+    }
+}
 @media (max-width: 600px) {
     .project__img {
-        top: 7vh;
+        width: 100%;
+        left: 0;
+    }
+    .project__arrow {
+        
     }
     .project__description {
 /*        bottom: 8vh;*/
