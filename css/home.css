@@ -239,10 +239,14 @@
 }
 
 .main-nav-btn {
-    margin: 1vh 3vw;
+    /* margin: 1vh 3vw; */
+    margin: 2vh 0.5vw;
     display: inline-block;
     opacity: 0; /* animates in */
   -webkit-transition:0.5s;
+  /* border: none; */
+  font-weight: 400;
+  letter-spacing: 0.2rem;
 }
 
 
