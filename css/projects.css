@@ -114,6 +114,11 @@ body {
     opacity: 0 !important;
 }
 
+/* Should be made not necessary, but used to remove .link underline on hover */
+.project__description a:hover {
+    text-decoration: none;
+}
+
 .project__title {
     position: relative;
     color: #333;

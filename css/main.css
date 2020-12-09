@@ -9,6 +9,42 @@ body, html {
     font-family: 'Montserrat', sans-serif;
 }
 
+.theme {
+    height: 100%;
+    --primary: var(--red);
+    --accent: var(--teal);
+    --teal: #008B8B;
+    --red: #8b0000;
+    --blue: #1f79c8;
+    --light-gray: #ccc;
+    --dark-gray: #555;
+    --gray: #999;
+    --font: 'Montserrat', sans-serif;
+    --shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 
+              0px 4px 5px 0px rgba(0,0,0,0.14), 
+              0px 1px 10px 0px rgba(0,0,0,0.12);
+
+    font-family: var(--font);
+}
+
+.theme .main-container h1 {
+    letter-spacing: 0.3rem;
+    line-height: initial;
+}
+
+.theme .main-container {
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+}
+
+.no-margin { margin: 0; }
+.padded { padding: 1rem; }
+
+.margin {
+    display: inline-block;
+    margin: 1rem;
+}
+
 .section {
     position: relative;
     overflow: hidden;
@@ -45,17 +81,38 @@ body, html {
 }
 
 .link {
+    color: var(--blue);
     text-decoration: none;
     cursor: pointer;
     /*font-weight: 400;*/
 }
 
-.link--underline:hover {
+.link:hover {
     text-decoration: underline;
 }
 
 .p {
+    margin: 0;
     line-height: 24px;
+}
+
+.emphasis {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.light-text {
+    font-weight: lighter;
+    color: var(--dark-gray);
+}
+
+.main-container {
+    position: absolute;
+    width: 90%;
+    height: calc(100vh - 100px);
+    top: 100px;
+    left: 5%;
+    padding-top: 30px;
 }
 
 /*********************** HEADER + NAVIGATION ********************************/

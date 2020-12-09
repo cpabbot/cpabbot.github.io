@@ -72,6 +72,10 @@
     transition: all 1000ms;
 }
 
+.card__title:hover {
+    text-decoration: none;
+}
+
 .card__title:after {
     content: '';
     width: 0px;
