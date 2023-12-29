@@ -1,142 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Favicon -->
     <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
+    
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/home.css">
-
+    
     <!-- Fonts -->
     <!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css"> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Krona+One|Righteous" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Kameron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kameron&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-
-    <meta name="description"
-        content="I am Cameron Abbot. A web developer that is passionate about design and collaborative development. My hope is to not just explore the world, but change it.">
+    
+    <meta name="description" content="I am Cameron Abbot. A web developer that is passionate about design and collaborative development. My hope is to not just explore the world, but change it.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Cameron Abbot </title>
     <meta property="og:title" content="Cameron Abbot" />
     <meta property="og:url" content="https://www.cameronabbot.com" />
     <meta property="og:image" content="https://www.cameronabbot.com/img/homepage.jpg" />
 
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168008565-1"></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'UA-168008565-1');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-168008565-1');
     </script>
 
+    
 </head>
 
-<body class="theme">
+<body>
 
-    <section class="section intro">
-        <h1 class="title title-1">Cameron</h1>
-        <h1 class="title title-2">Abbot</h1>
-        <h1 class="title title-mobile">Cameron<br>Abbot</h1>
 
-        <div class="intro__description">
-        </div>
-    </section>
+<section class="section intro">
+<!--    <img class="intro__img" src="img/self-reflection-cropped.png" alt="me">-->
+    
+<!--
+    <svg class="intro__svg" width="100%" height="100%" viewbox="0 0 100 100" preserveAspectRatio="none">
+        <path class="intro__svg-path" d="M55 25 L93 13 L93 75" stroke="#D50000" stroke-width="0.6" fill="transparent"/>
+    </svg>
+-->
+    <h1 class="h title title-1">Cameron</h1>
+    <h1 class="h title title-2">Abbot</h1>
+    <h1 class="h title title-mobile">Cameron<br>Abbot</h1>
+    
+    <div class="intro__description">
+        <!--img style="width:30vw" src="img/Cameron.png" alt="Cameron"-->
+        
+<!--
+        <p class="type">
+            <span>C:\</span><span class="type-text"></span><span class="type-cursor">|</span>
+        </p>
+-->
+    </div>
+    <!--img class="svg__computer" src="img/computer-html.svg" alt="computer"-->
+</section>
+    
+    
+<!--<div class="contact-btn"></div>-->
 
-    <main class="section main">
-        <div class="container row homeRow">
-            <div class="container div1 column">
-                <h1 class="h hidden">Hi, I'm <span class="emphasis">Cameron.</span></h1>
-                <p>I am passionate about building bridges between people and using technology to serve under-resourced
-                    communities.</p>
-                <a href="https://blog.cameronabbot.com" class="btn">my blog</a>
-            </div>
-            <div>
-                <img src="img/costarica_circle.png" class="img1 hidden" />
-            </div>
-        </div>
-        <img src="img/diagonal.svg" class="svg1" />
-        <div class="container row homeRow">
-            <div></div>
-            <div class="div1" style="color: #ddd; margin-top: 0; width: 70%;">
-                <p style="font-size: 1.8em;">
-                    &emsp;
-                    My expertise is currently in web development, but I believe in technological agnosticism and
-                    interdisciplinary versatility.
-                </p>
-            </div>
-        </div>
-        <div class="homeRow container column" style="margin-top: -70px;">
-            <div class="container row hidden">
-                <div class="container img_container">
-                    <img src="img/mountaineer_circle.png" class="img2" />
-                    <img src="img/runner_circle.png" class="img2" />
-                    <img src="img/artist_circle.png" class="img2" />
-                </div>
-            </div>
-            <div class="container row">
-                <a href="timeline/" class="btn">see my timeline</a>
-            </div>
-        </div>
-        <div class="container row homeRow" style="margin:100px 0;">
-            <div style="position: relative;" class="wordcloud hidden">
-                <span>HTML</span>
-                <span>C#</span>
-                <span>.NET</span>
-                <span>CSS</span>
-                <span>Typescript</span>
-                <span>SQL</span>
-                <span class="emphasis">React</span>
-            </div>
-            <div class="container div1 column cloud-background">
-                <h1 class="h">Web Development</span></h1>
-                <p>Some of my recent work includes an online management system for intramural sports, and refreshing an
-                    old nonprofit’s website.</p>
-                <a href="projects/" class="btn">see my projects</a>
-            </div>
-        </div>
-        <div class="container row homeRow">
-            <div class="container div2">
-                <h1 class="h">Photography</span></h1>
-                <p>I admire design and beauty in all areas of life, and photography seeks to capture that essence.</p>
-                <a href="photos/" class="btn">see my work</a>
-            </div>
-            <div class="container row hidden img_container">
-                <div>
-                    <img src="img/photography1.png" class="photography_img" />
-                </div>
-                <div>
-                    <img src="img/photography2.png" class="photography_img" />
-                </div>
-                <div>
-                    <img src="img/photography3.png" class="photography_img" />
-                </div>
-            </div>
-        </div>
-    </main>
+<section class="section home-two">
+    <div class="divider"></div>
+    
+    <svg class="home-svg" viewbox="0 0 100 100" preserveAspectRatio="none">
+<!--        <polygon points="0,0 0,100 100,100 100,0" style="fill:black;" class="home-graphic" />-->
+        <linearGradient id="home-svg-gradient">
+            <stop offset="0%" stop-color="#700000" />
+            <stop offset="60%" stop-color="#222" />
+        </linearGradient>
+    </svg>
+    
+    <div class="main-nav-container">
+        <a href="https://blog.cameronabbot.com" class="btn main-nav-btn">BLOG</a>
+        <a href="about/" class="btn main-nav-btn">ABOUT</a>
+        <a href="photos/" class="btn main-nav-btn">PHOTOS</a>
+        <a href="projects/" class="btn main-nav-btn">PROJECTS</a>
+    </div>
+</section>
+    
+<!--
+<section class="section intro2 about--1">
+    <div class="about-right"></div> comment out this line
+    <p class="about-desc--1">
+        My passion is to design things that are both <span class="emphasis e--1">functional</span> and <span class="emphasis e--2">beautiful</span>
+    </p>
+    
+</section>
+-->
+    
+<!--
+<section class="section section--nav">
+    
+    <div class="main-nav-container">
+        <a href="programs/" class="btn main-nav-btn">PROGRAMS</a>
+        <a href="photos/" class="btn main-nav-btn">PHOTOS</a>
+        <a href="projects/" class="btn main-nav-btn">PROJECTS</a>
+    </div>
+    
+</section>
+-->
+    
+<!--
+<section class="section section--contact">
+    
+</section>
+-->
 
-    <section class="footer container column">
-        <div class="container row" style="justify-content: space-between;">
-            <span style="color: #555; font-family: 'Kameron'; font-size: 1.3em;">Cameron Abbot</span>
-            <div class="container row">
-                <a href="projects/" class="link">projects</a>
-                <a href="timeline/" class="link">timeline</a>
-                <a href="photos/" class="link">photos</a>
-                <a href="https://blog.cameronabbot.com" class="link">blog</a>
-            </div>
-        </div>
-        <br />
-        <div class="container row " style="justify-content: space-between;">
-            <a href="/" class="link">cameronabbot.com</a>
-            <!-- <img src="img/favicon.ico" /> -->
-            <a href="#" class="link">contact@cameronabbot.com</a>
-        </div>
-        <br /><br />
-    </section>
 
-    <!-- js, jquery, parallax -->
+<!-- js, jquery, parrallax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="files/anime-master/lib/anime.min.js"></script>
@@ -146,5 +122,4 @@
 </body>
 
 <!-- Site created by Cameron Abbot -->
-
 </html>
