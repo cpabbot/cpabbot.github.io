@@ -202,7 +202,7 @@ body {
 
 .link--code:hover {
 /*    color: #0000BB;*/
-    text-decoration: underline;
+    text-decoration: underline !important;
 }
 
 
