@@ -1,144 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Favicon -->
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-    
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/projects.css">
-    
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <!-------------->
-    
+
     <!-- Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title> Projects | Cameron Abbot </title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168008565-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-168008565-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-168008565-1');
     </script>
-    
+
 </head>
 
 <body>
-    
-<!--------------- HEADER ----------------->
-<header class="header header--projects">
-    <a href="../"><h1 class="subtitle title--projects">Cameron Abbot</h1></a>
-    <div class="nav">
-<!--        <a href="../"><img src="../img/logo.png" alt="Cameron Abbot" class="logo"></a><br>-->
-        <a href="../about/" class="nav-link nav-link--projects">ABOUT</a>
-        &nbsp;&middot;&nbsp;
-        <a href="../photos/" class="nav-link nav-link--projects">PHOTOS</a>
-        &nbsp;&middot;&nbsp;
-        <a href="#" class="nav-link nav-link--projects nav-link--active nav-link--active--projects">PROJECTS</a>
-    </div>
-</header>
-<!---------------------------------------->
+
+    <!--------------- HEADER ----------------->
+    <header class="container row header" style="justify-content: space-between;">
+        <div>
+            <a href="../" class="nav-link">
+                <!-- <img src="../img/icons/back.svg"
+          style="display: inline; height: 1em; vertical-align: middle;" class="h" style="color: pink" /> -->
+                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.000000 512.000000"
+                    preserveAspectRatio="xMidYMid meet" style="display: inline; height: 1em; vertical-align: middle;"
+                    class="h">
+                    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
+                        <path d="M1850 4257 c-27 -8 -212 -187 -813 -786 -466 -464 -787 -792 -800
+-816 -28 -54 -28 -136 0 -190 32 -59 1547 -1570 1595 -1590 177 -73 359 110
+279 280 -13 27 -205 225 -590 610 -314 313 -571 573 -571 577 0 4 859 9 1909
+10 l1909 3 44 30 c138 97 118 306 -34 370 -33 13 -245 15 -1933 15 -1042 0
+-1895 3 -1895 7 0 4 263 271 584 593 573 574 584 586 594 635 35 169 -112 302
+-278 252z" />
+                    </g>
+                </svg>
+            </a>
+            <span class="h" style="vertical-align: middle;">&nbsp;&nbsp;my projects<span>
+        </div>
+        <a href="/" class="link no-underline"><span class="subtitle">Cameron Abbot
+            </span></a>
+    </header>
+    <!---------------------------------------->
 
 
-<!--------------- PROJECTS --------------->
-<section class="project">
-    
-    <!-- Note: first project both <img> and <div> needs to have 'js-fade' class, rest have 'enter' and 'hide' classes -->
-    
-    <!----- Chat Classifier ----->
-    <img src="../img/sites/chatclassifier.png" class="project__img js-proj js-fade">
-    <div class="project__description js-proj js-fade">
-        <a class="link" href="https://cameronabbot.com/chat-classifier" target="_blank"><h3 class="project__title link">Chat Classifier</h3></a>
-        <br><br><p class="project__story">For our final project in Machine Learning, another student and I created a classifier that can be trained on dialogue data and used to predict an inputted text's speaker. The two specific applications tested were on the 2020 presidential debate and an SMS text message classifier. Read our blog <a href="https://cameronabbot.medium.com/speaker-classification-d99dbad3b5c2" class="link">here</a>.</p>
-    </div>
+    <!--------------- PROJECTS --------------->
+    <section class="project">
 
-    <!----- IBRI Website ----->
-    <img src="../img/sites/ibri.png" class="project__img js-proj enter">
-    <div class="project__description js-proj enter hide">
-        <a class="link" href="https://ibri.org" target="_blank"><h3 class="project__title link">IBRI Site</h3></a>
-        <br><br><p class="project__story">The Interdisciplinary Biblical Research Institute is a nonprofit Christian organization that provides scholarly resources accessible all around the world. I was tasked with updating the design and organization of the site, improving its accessibility to all kinds of users. I learned the difficulties of working with such an outdated and massive web platform (97 GB!) and also how to study the analytics of its web traffic.</p>
-    </div>
+        <!-- Note: first project both <img> and <div> needs to have 'js-fade' class, rest have 'enter' and 'hide' classes -->
 
-    <!----- White Oak Project ----->
-    <img src="../img/sites/whiteoakproject.png" class="project__img js-proj enter">
-    <div class="project__description js-proj enter hide">
-        <a class="link" href="https://whiteoakproject.org" target="_blank"><h3 class="project__title link">White Oak Project</h3></a>
-        <br><br><p class="project__story">I worked with a nonprofit in New York to develop a site focused on their mission: to restore the presence of white oak and white pine trees in New York State's Canal Regions. The difficulty creating this site came with learning how to balance my own ambitions with the requirements of what needed to be included. This project taught me the importance of strategic planning in development.</p>
-    </div>
-    
-    <!----- Robotics Data Site ----->
-    <img src="../img/sites/paragondata.png" class="project__img js-proj enter">
-    <div class="project__description js-proj enter hide">
-        <a class="link" onclick="alert('This is a protected site, sorry!   ')" target="_blank"><h3 class="project__title link">Robotics Data Site</h3></a>
-        <br><br><p class="project__story">Up to this point, this site was the biggest project I had yet taken. The purpose was to create a data center to keep track of student's fundraising for our local robotics team, Team Paragon 571. Through this, my knowledge of php and sql grew tremendously. I learned a lot about back end development as well as the intricacies of working with clients of diverse technical backgrounds.</p>
-    </div>
-    
-    <!----- AP CSP Portfolio ----->
-    <img src="../img/sites/csp.png" class="project__img js-proj enter">
-    <div class="project__description js-proj enter hide">
-        <a class="link" href="/csp" target="_blank"><h3 class="project__title link">AP CSP Portfolio</h3></a>
-        <br><br><p class="project__story">We were supposed to just make a Google site for AP Computer Science Principles, but I used this opportunity to gain more experience by creating this portfolio throughout the year for the class. I tried out Google's material design framework for this.</p>
-        <a href="https://github.com/cpabbot/csp" class="link--code link" target="_blank"><i>(view code)</i></a>
-    </div>
-    
-    <!----- Uber Eis ----->
-    <img src="../img/sites/ubereis.png" class="project__img js-proj enter">
-    <div class="project__description js-proj enter hide">
-        <a class="link" href="/ubereis" target="_blank"><h3 class="project__title link">Uber Eis</h3></a>
-        <br><br><p class="project__story">For many years I had dreams of making a small ice cream business! I'm still pretty proud of this little website; the idea was that people could order ice cream and we would bring it straight to them</p>
-        <a href="https://github.com/cpabbot/ubereis" class="link--code link" target="_blank"><i>(view code)</i></a>
-    </div>
-    
-    <!----- Acquia Adventure ----->
-    <img src="../img/sites/acquia.png" class="project__img js-proj enter"> <!-- not sure why it doesn't work with hide, work on this! (plus the following ones) -->
-    <div class="project__description js-proj enter hide">
-        <a class="link" href="http://acquia-adventure.github.io/" target="_blank"><h3 class="project__title link">Acquia Adventure</h3></a>
-        <br><br><p class="project__story">I got the opportunity to go to CodeDay Boston, a 24 hour coding experience where several team members and I got to turn an idea into a program. I worked with another young web developer to create this site about the game we created, and I learned so much from her and the entire experience.</p>
-        <a href="https://github.com/acquia-adventure/acquia-adventure.github.io" class="link--code link" target="_blank"><i>(view code)</i></a>
-    </div>
-    
-    <!----- Awana ----->
-    <img src="../img/sites/awana.png" class="project__img js-proj enter">
-    <div class="project__description js-proj enter hide">
-        <a class="link" href="/awana" target="_blank"><h3 class="project__title link">Awana</h3></a>
-        <br><br><p class="project__story">I worked on creating a site for the Awana program at our church, Calvary Church in West Hartford. The site was never really finished, but this site was my first experimentation after leaving Google's mdl design framework.</p>
-        <a href="https://github.com/cpabbot/csp" class="link--code link" target="_blank"><i>(view code)</i></a>
-    </div>
-    
-    <!----- ThePiGuy ----->
-    <img src="../img/sites/thepiguy.png" class="project__img js-proj enter">
-    <div class="project__description js-proj enter hide">
-        <a class="link" href="/thepiguy" target="_blank"><h3 class="project__title link">ThePiGuy</h3></a><span class="project_title2"> &nbsp;&nbsp;(Portfolio v2.0)</span>
-        <br><br><p class="project__story">Here I pieced together my small fragments of web-dev knowledge to create a basic site for myself. It's encouraging to see how far I've come :)</p>
-        <a href="https://github.com/cpabbot/thepiguy" class="link--code link" target="_blank"><i>(view code)</i></a>
-    </div>
-    
-    <!----- First Website ----->
-    <img src="../img/sites/firstwebsite.png" class="project__img js-proj enter">
-    <div class="project__description js-proj enter hide">
-        <a class="link" href="/firstwebsite" target="_blank"><h3 class="project__title link">First Website</h3></a><span class="project_title2"> &nbsp;&nbsp;(Portfolio v1.0)</span>
-        <br><br><p class="project__story">This was the first site I created. I first discovered html playing around with iChrome's customizable iFrame. I then learned more at W3Schools and there I found a growing interest for web development.</p>
-        <a href="https://github.com/cpabbot/firstwebsite" class="link--code link" target="_blank"><i>(view code)</i></a>
-    </div>
-    
-    
-    <a class="project__arrow project__arrow--back" type="button" onclick="previousProject()" href="#"><img src="../img/icons/left-chevron.svg" width="100%"></a>
-    <a class="project__arrow project__arrow--next" type="button" onclick="nextProject()" href="#"><img src="../img/icons/right-chevron.svg" width="100%"></a>
-    
-    <div class="overlay hide"></div>
-</section>
+        <!----- Chat Classifier ----->
+        <img src="../img/sites/chatclassifier.png" class="project__img js-proj js-fade">
+        <div class="project__description js-proj js-fade">
+            <a class="link" href="https://cameronabbot.com/chat-classifier" target="_blank">
+                <h3 class="project__title link">Chat Classifier</h3>
+            </a>
+            <br><br>
+            <p class="project__story">For our final project in Machine Learning, another student and I created a
+                classifier that can be trained on dialogue data and used to predict an inputted text's speaker. The two
+                specific applications tested were on the 2020 presidential debate and an SMS text message classifier.
+                Read our blog <a href="https://cameronabbot.medium.com/speaker-classification-d99dbad3b5c2"
+                    class="link">here</a>.</p>
+        </div>
 
-    
-<!-- JQuery, js -->
+        <!----- IBRI Website ----->
+        <img src="../img/sites/ibri.png" class="project__img js-proj enter">
+        <div class="project__description js-proj enter hide">
+            <a class="link" href="https://ibri.org" target="_blank">
+                <h3 class="project__title link">IBRI Site</h3>
+            </a>
+            <br><br>
+            <p class="project__story">The Interdisciplinary Biblical Research Institute is a nonprofit Christian
+                organization that provides scholarly resources accessible all around the world. I was tasked with
+                updating the design and organization of the site, improving its accessibility to all kinds of users. I
+                learned the difficulties of working with such an outdated and massive web platform (97 GB!) and also how
+                to study the analytics of its web traffic.</p>
+        </div>
+
+        <!----- White Oak Project ----->
+        <img src="../img/sites/whiteoakproject.png" class="project__img js-proj enter">
+        <div class="project__description js-proj enter hide">
+            <a class="link" href="https://whiteoakproject.org" target="_blank">
+                <h3 class="project__title link">White Oak Project</h3>
+            </a>
+            <br><br>
+            <p class="project__story">I worked with a nonprofit in New York to develop a site focused on their mission:
+                to restore the presence of white oak and white pine trees in New York State's Canal Regions. The
+                difficulty creating this site came with learning how to balance my own ambitions with the requirements
+                of what needed to be included. This project taught me the importance of strategic planning in
+                development.</p>
+        </div>
+
+        <!----- Robotics Data Site ----->
+        <img src="../img/sites/paragondata.png" class="project__img js-proj enter">
+        <div class="project__description js-proj enter hide">
+            <a class="link" onclick="alert('This is a protected site, sorry!   ')" target="_blank">
+                <h3 class="project__title link">Robotics Data Site</h3>
+            </a>
+            <br><br>
+            <p class="project__story">Up to this point, this site was the biggest project I had yet taken. The purpose
+                was to create a data center to keep track of student's fundraising for our local robotics team, Team
+                Paragon 571. Through this, my knowledge of php and sql grew tremendously. I learned a lot about back end
+                development as well as the intricacies of working with clients of diverse technical backgrounds.</p>
+        </div>
+
+        <!----- AP CSP Portfolio ----->
+        <img src="../img/sites/csp.png" class="project__img js-proj enter">
+        <div class="project__description js-proj enter hide">
+            <a class="link" href="/csp" target="_blank">
+                <h3 class="project__title link">AP CSP Portfolio</h3>
+            </a>
+            <br><br>
+            <p class="project__story">We were supposed to just make a Google site for AP Computer Science Principles,
+                but I used this opportunity to gain more experience by creating this portfolio throughout the year for
+                the class. I tried out Google's material design framework for this.</p>
+            <a href="https://github.com/cpabbot/csp" class="link--code link" target="_blank"><i>(view code)</i></a>
+        </div>
+
+        <!----- Uber Eis ----->
+        <img src="../img/sites/ubereis.png" class="project__img js-proj enter">
+        <div class="project__description js-proj enter hide">
+            <a class="link" href="/ubereis" target="_blank">
+                <h3 class="project__title link">Uber Eis</h3>
+            </a>
+            <br><br>
+            <p class="project__story">For many years I had dreams of making a small ice cream business! I'm still pretty
+                proud of this little website; the idea was that people could order ice cream and we would bring it
+                straight to them</p>
+            <a href="https://github.com/cpabbot/ubereis" class="link--code link" target="_blank"><i>(view code)</i></a>
+        </div>
+
+        <!----- Acquia Adventure ----->
+        <img src="../img/sites/acquia.png" class="project__img js-proj enter">
+        <!-- not sure why it doesn't work with hide, work on this! (plus the following ones) -->
+        <div class="project__description js-proj enter hide">
+            <a class="link" href="http://acquia-adventure.github.io/" target="_blank">
+                <h3 class="project__title link">Acquia Adventure</h3>
+            </a>
+            <br><br>
+            <p class="project__story">I got the opportunity to go to CodeDay Boston, a 24 hour coding experience where
+                several team members and I got to turn an idea into a program. I worked with another young web developer
+                to create this site about the game we created, and I learned so much from her and the entire experience.
+            </p>
+            <a href="https://github.com/acquia-adventure/acquia-adventure.github.io" class="link--code link"
+                target="_blank"><i>(view code)</i></a>
+        </div>
+
+        <!----- Awana ----->
+        <img src="../img/sites/awana.png" class="project__img js-proj enter">
+        <div class="project__description js-proj enter hide">
+            <a class="link" href="/awana" target="_blank">
+                <h3 class="project__title link">Awana</h3>
+            </a>
+            <br><br>
+            <p class="project__story">I worked on creating a site for the Awana program at our church, Calvary Church in
+                West Hartford. The site was never really finished, but this site was my first experimentation after
+                leaving Google's mdl design framework.</p>
+            <a href="https://github.com/cpabbot/csp" class="link--code link" target="_blank"><i>(view code)</i></a>
+        </div>
+
+        <!----- ThePiGuy ----->
+        <img src="../img/sites/thepiguy.png" class="project__img js-proj enter">
+        <div class="project__description js-proj enter hide">
+            <a class="link" href="/thepiguy" target="_blank">
+                <h3 class="project__title link">ThePiGuy</h3>
+            </a><span class="project_title2"> &nbsp;&nbsp;(Portfolio v2.0)</span>
+            <br><br>
+            <p class="project__story">Here I pieced together my small fragments of web-dev knowledge to create a basic
+                site for myself. It's encouraging to see how far I've come :)</p>
+            <a href="https://github.com/cpabbot/thepiguy" class="link--code link" target="_blank"><i>(view code)</i></a>
+        </div>
+
+        <!----- First Website ----->
+        <img src="../img/sites/firstwebsite.png" class="project__img js-proj enter">
+        <div class="project__description js-proj enter hide">
+            <a class="link" href="/firstwebsite" target="_blank">
+                <h3 class="project__title link">First Website</h3>
+            </a><span class="project_title2"> &nbsp;&nbsp;(Portfolio v1.0)</span>
+            <br><br>
+            <p class="project__story">This was the first site I created. I first discovered html playing around with
+                iChrome's customizable iFrame. I then learned more at W3Schools and there I found a growing interest for
+                web development.</p>
+            <a href="https://github.com/cpabbot/firstwebsite" class="link--code link" target="_blank"><i>(view
+                    code)</i></a>
+        </div>
+
+
+        <a class="project__arrow project__arrow--back" type="button" onclick="previousProject()" href="#"><img
+                src="../img/icons/left-chevron.svg" width="100%"></a>
+        <a class="project__arrow project__arrow--next" type="button" onclick="nextProject()" href="#"><img
+                src="../img/icons/right-chevron.svg" width="100%"></a>
+
+        <div class="overlay hide"></div>
+    </section>
+
+
+    <!-- JQuery, js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="../js/projects.js"></script>
-    
+
 </body>
 <!-- Site created by Cameron Abbot -->
+
 </html>
