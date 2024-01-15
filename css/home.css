@@ -4,10 +4,22 @@
     background: url("../img/Cameron2.jpeg") no-repeat center center;
     background-attachment: fixed;
     background-size: cover;
-/*    position: fixed;*/
 }
 
-.intro-down {
+/** MOBILE **/  
+.intro::before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(35,35,35,.4);
+    z-index: 1;
+}
+
+.scrollDown {
     position: absolute;
     bottom: 2rem;
     left: 0;
@@ -21,92 +33,10 @@
     border: solid 2px #bbb;
     padding: 5px;
 
-    -webkit-animation: sdb03 2.5s infinite;
-    animation: sdb03 2.5s infinite;
+    -webkit-animation: scrollAnimation 2.5s infinite;
+    animation: scrollAnimation 2.5s infinite;
     opacity: 0;
     animation-delay: 4s;
-}
-
-  @-webkit-keyframes sdb03 {
-    0% {
-      opacity: 0;
-    }
-    30% {
-      opacity: 1;
-    }
-    60% {
-      box-shadow: 0 0 0 60px rgba(255,255,255,.1);
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-  @keyframes sdb03 {
-    0% {
-      opacity: 0;
-      transform: translateY(0);
-    }
-    30% {
-      opacity: 1;
-    }
-    60% {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-/** MOBILE **/  
-.intro::before {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-/*    filter: blur(3px);*/
-    background-color: rgba(35,35,35,.4);
-    z-index: 1;
-}
-
-.intro__img {
-    opacity: 0;
-    height: 90vh;
-    position: absolute;
-    left: 3vw;
-    bottom: -3vh;
-    
-    animation: fadeUp 2s 0.8s; /* not sure 0s or .8s which delay looks better */
-    animation-fill-mode: forwards;
-}
-
-.intro__svg {
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-    
-    /* this delayed animation prevents svg from appearing before animate in */
-    opacity: 0;
-    animation: fade 0s 1.5s;
-    animation-fill-mode: forwards;
-}
-
-/*** MOBILE ***/
-.intro__svg-path {
-    stroke: transparent;
-}
-
-.intro__description {
-    position: absolute;
-    bottom: 10vh;
-    width: 100%;
-    text-align: center;
-/*    right: 10vw;*/
-/*    z-index: 1;*/
 }
 
 .title {
@@ -132,50 +62,16 @@
     text-align: center;
     z-index: 9;
     font-weight: bolder;
-    /* margin: 0; */
 }
 
-.title-1 {
-    top: 0vh;
-/*    width: 100%*/
-/*    padding: 0 5vw;*/
-}
-
-.title-2 {
-    bottom: 0vh;
-/*    width: 100%;*/
-/*    padding: 0 5vw;*/
-}
-
-.title-1, .title-2 {
-    display: none;
-}
+.title-1 { top: 0vh; }
+.title-2 { bottom: 0vh; }
+.title-1, .title-2 { display: none; }
 
 .title-mobile {
     font-size: calc(6vw + 6rem);
     text-align: left;
-/*    margin: 5vw 5vw;*/
 }
-
-.type {
-    width: 100%;
-    
-    color: #DDD;
-    font-size: 8vw;
-    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco, "Bitstream Vera Sans Mono", monospace;
-    font-family: "Krona One", sans-serif;
-    
-    opacity: 0;
-    -webkit-animation: fade 2s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fade 2s; /* Firefox < 16 */
-        -ms-animation: fade 2s; /* Internet Explorer */
-         -o-animation: fade 2s; /* Opera < 12.1 */
-            animation: fade 2s 3.2s;
-    animation-fill-mode: forwards; /* stay after animation */
-}
-
-/*************************************/
-
 .main {
     padding: 3vh 2vw;
 }
@@ -185,33 +81,34 @@
     font-size: 1.1rem;
 }
 
-.div1 {
+.contentA {
     width: max(50%, 400px);
     padding: 1rem;
 }
 
-.diagonalContent {
+.contentB {
+    width: 300px;
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin-top: 30px;
+}
+
+.content--diag {
     color: #ddd;
     margin-top: 0;
     width: max(70%, 400px);
 }
 
-.img1 {
+.img--hello {
     width: 250px;
 }
 
-@media (min-width: 750px) {
-    .img1 {
-        margin-top: 70px;
-    }
-}
-
-.img2 {
+.img--mini {
     width: 130px;
     margin: 20px 10px;
 }
 
-.svg1 {
+.diag-svg {
     margin: -2vw;
     /* position needs to be relative or absolute for z-index to work */
     position: absolute;
@@ -293,13 +190,6 @@
     height: 220px;
 }
 
-.div2 {
-    width: 300px;
-    font-size: 1.1rem;
-    padding: 1rem;
-    margin-top: 30px;
-}
-
 .h {
     font-weight: normal;
 }
@@ -308,61 +198,81 @@
     padding: 0 50px;
 }
 
+/* mobile */
 @media (max-width: 700px) {
-    .img1 {
+    .img--hello {
         width: 220px;
     }
-    .diagonalContent {
+    .content--diag {
         margin-top: -50px;
         font-size: 0.8em;
     }
     .img_container {
         gap: 0px;
     }
-    .img2 {
+    .img--mini {
         width:100px;
     }
     .homeRow {
         margin-bottom: 50px;
     }
-    .div2 {
+    .contentB {
         width: 400px;
         order: 2;
     }
 }
 
+/* desktop */
+@media (min-width: 750px) {
+    .img--hello {
+        margin-top: 70px;
+    }
+}
+
+/** DESKTOP **/
 @media (min-width: 850px) {    
     .title {
         font-size: 12vw;
     }
-    
     .title-mobile {
         display: none;
     }
     .title-1, .title-2 {
         display: block;
     }
-}
-
-/** DESKTOP **/
-@media only screen and (min-width: 850px) { /* maybe put below other css and remove !importants */
     .intro::before {
         content: none;
     }
-    .title {
-        color: #fff !important;
-        /* position: fixed; */
-    }
-    .type {
-        color: #222 !important;
-    }
-    .intro__svg-path {
-        stroke: #D50000 !important;
-    }
-    .intro .intro__img {
-        width: 55vw;
-        height: auto;
-        max-height: 90vh;
-    }
 }
 
+@-webkit-keyframes scrollAnimation {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      box-shadow: 0 0 0 60px rgba(255,255,255,.1);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes scrollAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    30% {
+      opacity: 1;
+    }
+    60% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 0;
+    }
+  }

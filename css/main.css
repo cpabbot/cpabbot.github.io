@@ -174,28 +174,6 @@ p {
   -webkit-text-fill-color: transparent;
 }
 
-.nav--old {
-    position: absolute;
-    right: 3vw;
-    top: 3vh;
-    text-align: center;
-    color: #DDD;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.nav-link--old {
-    text-decoration: none;
-    color: #DDD;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: color 100ms;
-}
-
-.nav-link--old:hover {
-    color: #BBB;
-}
-
 .nav {
     position: absolute;
     right: 5%;
@@ -205,12 +183,10 @@ p {
     color: #DDD;
     font-weight: 600;
     font-size: 0.9rem;
-    
     top: 0;
 }
 
 .logo {
-    /*width: 17vw;*/
     width: 170px;
 }
 
@@ -234,7 +210,6 @@ p {
 }
 
 /****** Dark Theme Header*****/
-
 .header--dark {
     background-color: #8b0000;
 }
@@ -254,7 +229,6 @@ p {
 .nav-link--active--dark {
     color: #FFF;
 }
-
 /******************************/
 
 @media (max-width: 700px) {
