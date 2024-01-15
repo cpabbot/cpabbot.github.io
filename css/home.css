@@ -27,16 +27,15 @@
     margin-left: auto;
     margin-right: auto;
     width: 3em;
-    /* mix-blend-mode: difference; */
     fill: #bbb;
     border-radius: 50%;
     border: solid 2px #bbb;
     padding: 5px;
 
-    -webkit-animation: scrollAnimation 2.5s infinite;
-    animation: scrollAnimation 2.5s infinite;
+    -webkit-animation: scrollAnimation 3s infinite;
+    animation: scrollAnimation 3s infinite;
     opacity: 0;
-    animation-delay: 4s;
+    animation-delay: 3s;
 }
 
 .title {
